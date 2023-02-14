@@ -1,10 +1,10 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    public: '/',
-    src: '/_dist_',
+    public: { url: "/", static: true, dot: true },
+    src: { url: "/dist" },
   },
   buildOptions: {
-    baseUrl: '',
+    baseUrl: "/docs",
   },
-}
+};

@@ -9,19 +9,6 @@ const formaPrice = (price) => {
     const newPrice=new window.Intl.NumberFormat("en-EN",{style:"currency", currency: "USD"}).format(price)
     return newPrice;
 };
-//web api
-//contectarnos al server
-window
-  .fetch(`${baseUrl}/api/avo`)
-  //procesar la respuesta y convertirla en JSON
-  .then((respuesta) => respuesta.json())
-  //JSON -> data -> renderisar info browser
-  .then((responseJson) => {
-    responseJson.data.forEach((item) => {
-      console.log(item.name);
-    });
-  });
-
 const fecthData = async () => {
   const respuesta = await window.fetch(`${baseUrl}/api/avo`);
   const body = await respuesta.json();
@@ -38,7 +25,6 @@ const fecthData = async () => {
     //crear precio
     const price = document.createElement("h5");
     price.textContent = formaPrice(item.price);
-    price.className = "";
 
     const priceAndTitle = document.createElement("div");
     priceAndTitle.className =
