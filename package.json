@@ -1,4 +1,5 @@
 {
+  "homepage": "https://1tai7.github.io/avocado-shop/",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
