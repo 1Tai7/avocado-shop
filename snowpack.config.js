@@ -5,6 +5,6 @@ module.exports = {
     src: { url: "/dist" },
   },
   buildOptions: {
-    baseUrl: "/docs",
+    baseUrl: "",
   },
 };
